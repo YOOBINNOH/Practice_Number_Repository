@@ -3,6 +3,7 @@ package Practice_number_repository.Practice_number_repository.controller;
 
 
 
+import Practice_number_repository.Practice_number_repository.dto.Integration_member;
 import Practice_number_repository.Practice_number_repository.dto.Join_member;
 import Practice_number_repository.Practice_number_repository.dto.login_member;
 import Practice_number_repository.Practice_number_repository.dto.test_member;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class Controllers {
+
+
 
     @GetMapping("home")
     public String home(){
@@ -34,10 +37,14 @@ public class Controllers {
     }
 
 
+
+
     @PostMapping("join_register")
-    public String join_register(Join_member form){
-        System.out.println(form.toString());
-        return "";
+    public String join_register(Join_member join){
+        join.add_number();
+        return "redirect:/";
+
+
     }
 
     @PostMapping("login_register")

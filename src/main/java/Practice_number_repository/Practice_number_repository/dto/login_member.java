@@ -10,9 +10,7 @@ public class login_member {
 
     @Override
     public String toString() {
-        return "login_member{" +
-                "id=" + login_id +
-                '}';
+        return "login_member{" + "id=" + login_id +'}';
     }
 
 }
